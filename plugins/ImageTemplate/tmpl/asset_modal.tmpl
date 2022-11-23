@@ -1,0 +1,28 @@
+<mt:SetVarBlock name="js_include" append="1">
+<__trans_section component="ImageTemplate">
+  <script src="<mt:Var name="plugin_image_template_static_path" />/dist/asset_modal.min.js?v=<mt:Var name="plugin_image_template_version" />" defer></script>
+  <link rel="stylesheet" href="<mt:Var name="plugin_image_template_static_path" />/dist/asset_modal.min.css?v=?v=<mt:Var name="plugin_image_template_version" />" />
+  <template id="plugin-image-template-panel-nav-item">
+    <li class="nav-item">
+      <a href="#plugin-image-template-panel" class="nav-link left-menu-item" id="plugin-image-template-panel-button" data-panel-id="#plugin-image-template-panel" data-toggle="tab">
+        <__trans phrase="Generate via template">
+      </a>
+    </li>
+  </template>
+  <template id="plugin-image-template-panel-body">
+    <div id="plugin-image-template-panel" class="tab-pane">
+      <div><select class="form-control"></select></div>
+      <br />
+      <mtapp:setting
+       id="plugin-image-template-filename"
+       label="<__trans phrase="Filename">"
+       show_label="1"
+       label_class="top-label"
+       class="form-inline">
+       <input type="text" id="plugin-image-template-filename" class="form-control text path required col-11"/> .png
+      </mtapp:setting>
+      <div id="plugin-image-template-panel-image" style="max-width: 50%;"></div>
+    </div>
+  </template>
+</__trans_section>
+</mt:SetVarBlock>

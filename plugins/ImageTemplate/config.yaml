@@ -1,0 +1,23 @@
+id: ImageTemplate
+name: ImageTemplate
+version: 0.0.1
+
+description: <__trans phrase="This plugin enables you to generate image form MTML template.">
+author_name: Taku Amano
+author_link: http://blog.taaas.jp/
+plugin_link: http://blog.taaas.jp/mt/mt-plugin-ImageTemplate/
+
+l10n_lexicon:
+  ja:
+    This plugin enables you to generate image form MTML template.: "MTMLのテンプレートから画像を生成します"
+    Generate via template: "テンプレートから生成"
+
+callbacks:
+  MT::App::CMS::init_app: $ImageTemplate::MT::Plugin::ImageTemplate::init_app
+  MT::App::CMS::template_param.asset_modal: $ImageTemplate::MT::Plugin::ImageTemplate::template_param_asset_modal
+
+applications:
+  cms:
+    methods:
+      image_template_get_templates: $ImageTemplate::MT::Plugin::ImageTemplate::get_templates
+      image_template_generate_source: $ImageTemplate::MT::Plugin::ImageTemplate::generate_source
