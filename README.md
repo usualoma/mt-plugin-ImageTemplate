@@ -1,7 +1,7 @@
 # ImageTemplate
 
 This is a plugin for the Movable Type.
-This plugin enables you to convert movie before uploading by ffmpeg.
+This plugin enables you to generate image form MTML template.
 
 ## Screenshot
 
@@ -9,7 +9,7 @@ This plugin enables you to convert movie before uploading by ffmpeg.
 
 ## Demo
 
-https://youtu.be/SSweZt4KtGo
+https://youtu.be/baifEAfnACU
 
 ## Installation
 
@@ -26,6 +26,29 @@ Should look like this when installed:
             plugins/
                 ImageTemplate/
 
+## Usage
+
+### Steps
+
+1. Create a template module for svg data.
+1. Open the asset selection modal.
+
+### Naming rul
+
+If you create a module with the following name for a template, it will be used as a template for images.
+
+#### Entry
+
+* `image_template_entry_${sort_order}_${display_name}`
+
+#### Page
+
+* `image_template_page_${sort_order}_${display_name}`
+
+#### Content Data
+
+* `image_template_content_data_${content_type_id}_${sort_order}_${display_name}`
+
 ## Requirements
 
 * Movable Type 7
@@ -33,12 +56,10 @@ Should look like this when installed:
 ## Supported browsers
 
 * Google Chrome
-* Firefox
-* Safari
 
 ## LICENSE
 
-Copyright (c) 2020 Taku AMANO
+Copyright (c) 2022 Taku AMANO
 
 Permission is hereby granted, free of charge, to any person obtaining
 a copy of this software and associated documentation files (the
